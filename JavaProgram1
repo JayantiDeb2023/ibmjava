@@ -1,0 +1,22 @@
+package Package1;
+import java.util.Scanner;
+public class Program2 {
+public static void main(String args[])
+{
+	Scanner a=new Scanner(System.in);
+	int b=a.nextInt();
+	int c=a.nextInt();
+	int d=a.nextInt();
+	int e=a.nextInt();
+	if(e>b && e>c && e>d)
+		System.out.println(e+" is greatest");
+	else if(b>c&& b>d && b>e)
+		System.out.println(b+"is greatest");
+	else if (c>b && c>d && c>e)
+		System.out.println(c+" is greatest");
+	else
+		System.out.println(d+"is greatest");
+	
+	
+}
+}
