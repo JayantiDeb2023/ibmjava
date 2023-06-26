@@ -1,0 +1,21 @@
+package Package1;
+import java.util.Scanner;
+public class Program3 {
+public static void main(String args[])
+{
+	Scanner ob=new Scanner(System.in);
+	int n=ob.nextInt();
+	int a=n;
+	int r=0,c=0;
+	while(n>0)
+	{
+		r=n%10;
+		c=(c*10)+r;
+		n=n/10;
+	}
+	if(a==c)
+		System.out.println(a+" is palindrome  number");
+	else
+		System.out.println(a+" is not palindrome number");
+}
+}
