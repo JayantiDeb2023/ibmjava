@@ -1,0 +1,14 @@
+package Package2;
+
+public class Test {
+ public static void main(String args[])
+ {
+	 Employee a=new Employee();
+	 Department b=new Department();
+	 Location c=new Location();
+	 c.getLocation(101,"hyderabad","india",500015);
+	 b.createDepartment(104, "computerScience", c);
+	 a.setDetails(101,"jayanti",b, "hyderabad");
+	 System.out.println(a.getDetails());
+ }
+}
