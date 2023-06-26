@@ -1,0 +1,19 @@
+package Package2;
+
+public class Employee {
+     private int empId;
+     private String empName;
+     private Department dept;
+     private String city;
+     public void setDetails(int empid,String empname,Department dept1,String city1)
+     {   
+    	 empId=empid;
+    	 empName=empName;
+    	 dept=dept1;
+    	 city=city1;
+     }
+     public String getDetails()
+     {
+    	 return "empId:"+empId+",empName:"+empName+",dept:"+dept.getDetails()+",city:"+city;
+     }
+}
