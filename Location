@@ -1,0 +1,19 @@
+package Package2;
+
+public class Location {
+     private int locationid;
+     private String city;
+     private String country;
+     private int pincode;
+     public void getLocation(int locationid,String city,String country,int pincode)
+     {
+    	 this.locationid=locationid;
+    	 this.city=city;
+    	 this.country=country;
+    	 this.pincode=pincode;
+     }
+     public String getDetails()
+     {
+    	 return "locationid:"+locationid+",city:"+city+",country:"+country+",pincode:"+pincode;
+     }
+}
