@@ -1,0 +1,17 @@
+package Package2;
+
+public class Department {
+   private int deptid;
+   private String deptname;
+   private Location location;
+   public void createDepartment(int deptid,String deptname,Location location)
+   {
+	   this.deptid=deptid;
+	   this.deptname=deptname;
+	   this.location=location;
+   }
+   String getDetails()
+   {
+	  return "deptid:"+this.deptid+",deptname:"+this.deptname+",location:"+this.location.getDetails();
+   }
+}
