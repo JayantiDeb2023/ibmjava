@@ -1,0 +1,14 @@
+package Package1;
+import java.util.Scanner;
+public class Program4 {
+public static void main(String args[] )
+{
+	Scanner n=new Scanner(System.in);
+	int n1=n.nextInt(),f=1;
+	for(int i=2;i<=n1;i++)
+	{
+		f=f*i;
+	}
+	System.out.println("Factorial of"+" "+n1+"="+f);
+}
+}
