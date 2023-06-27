@@ -6,13 +6,16 @@ public class Test {
  public static void main(String args[])
  {
    Scanner ob =new Scanner(System.in);
-   Vector <Employee> a= new Vector<Employee>();
    int ch=0;
+   EmployeeFactory c=new EmployeeFactory();
+   Vector <Employee> a=c.getAllEmployee();
    do
    {
 	  System.out.println("1-add Employee");
 	  System.out.println("2-display Employee");
 	  System.out.println("3-Find Employee");
+	  System.out.println("4-Remove Employee with specific Name");
+	  System.out.println("5-Updated Employee");
 	  System.out.println("0-exit");
 	  System.out.println("Enter your choice");
 	  ch=ob.nextInt();
@@ -22,30 +25,27 @@ public class Test {
 		  System.exit(0);
 		  break;
 	  case 1:
-		  EmployeeFactory f=new EmployeeFactory();
-		  Employee g=f.createEmployee();
-		  a.add(g);
+		  c.createEmployee();
 		  break;
 	  case 2:
-		  Enumeration <Employee> e=a.elements();
-		  while(e.hasMoreElements())
-		  {   System.out.println("**************");
-			  System.out.println(e.nextElement());
-		  }
+		 c.printDetails();
 		  break;
 	  case 3:
-		  System.out.println("Enter EmployeeId");
-			  int empId=ob.nextInt(),g2=0;
-					  Enumeration <Employee> e1=a.elements();
-			  while(e1.hasMoreElements())
-				  {   Employee a1=e1.nextElement();
-				  if(a1.getEmpId()==empId)
-				  {   g2=1;
-					  System.out.println(a1);break;}
-			  }
-			  if(g2==0)
-				  System.out.println("Element not found");
+		  Employee g=c.findEmployee();
+		  if (g!=null)
+			  System.out.println(g);
+		  else
+			  System.out.println("Employee not found try again");
 			  break;
+	  case 4:
+		  c.removeEmployee();
+	  break;
+	  case 5:
+		  System.out.println("Enter Employee id");
+		  int eid=ob.nextInt();
+		  c.UpdateEmployee(eid);
+		  break;
+		  
 	  }
    }while(ch!=0);
  }
