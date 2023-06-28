@@ -1,55 +1,67 @@
-package Package2;
+package Project5;
 
 public class Employee {
-     private int empId;
-     private String empName;
-     private Department dept;
-     private String city;
-     Employee()
-     {
-    	 
-     }
-     Employee(int empid,String empname,Department dept1,String city1){
-    	 empId=empid;
-    	 empName=empName;
-    	 dept=dept1;
-    	 city=city1; 
-     }
-     public int getEmpId() {
-		return empId;
+	private String name;
+	private double salary;
+	private DEPT dept;
+	private static int empid=0;
+	
+	public String getName() {
+		return name;
 	}
-	public void setEmpId(int empId) {
-		this.empId = empId;
+
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getEmpName() {
-		return empName;
+
+
+	public double getSalary() {
+		return salary;
 	}
-	public void setEmpName(String empName) {
-		this.empName = empName;
+
+
+	public void setSalary(double salary) {
+		this.salary = salary;
 	}
-	public Department getDept() {
+
+
+	public DEPT getDept() {
 		return dept;
 	}
-	public void setDept(Department dept) {
+
+
+	public void setDept(DEPT dept) {
 		this.dept = dept;
 	}
-	public String getCity() {
-		return city;
+
+
+	public static int getEmpid() {
+		return empid;
 	}
-	public void setCity(String city) {
-		this.city = city;
+
+
+	public static void setEmpid(int empid) {
+		Employee.empid = empid;
 	}
-	
-     public void setDetails(int empid,String empname,Department dept1,String city1)
-     {   
-    	 empId=empid;
-    	 empName=empName;
-    	 dept=dept1;
-    	 city=city1;
-     }
-	@Override
-	public String toString() {
-		return "Employee [empId=" + empId + ", empName=" + empName + ", dept=" + dept.toString() + ", city=" + city + "]";
+
+
+	public Employee() {
+		super();
 	}
-     
+
+
+	public Employee(String name, double salary,DEPT dept) {
+		super();
+		this.name = name;
+		this.salary = salary;
+		this.dept=dept;
+		this.empid=empid+1;
+	}
+
+
+	public final String getDetails()
+	{
+		return "name" +name+" salary"+salary;
+	}
 }
