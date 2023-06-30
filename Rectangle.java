@@ -1,22 +1,32 @@
-package project4;
+package Project6;
 
-public class Rectangle extends Shape{
-	private MyColor color;
-	Rectangle(int height,int weight,MyColor color)
-	{ super(height,weight);
-	  this.color=color;
+public class Rectangle implements Shape{
+	private double length;
+	private double width;
+	Rectangle(double length,double width)
+	{
+		this.length=length;
+		this.width=width;
 	}
-	
-	@Override
-	public double calculateShape(int height, int width) {
-		// TODO Auto-generated method stub
-		return height*width;
+	public double getLength() {
+		return length;
 	}
-
-	@Override
-	public String toString() {
-		return "Rectangle [color=" + color+super.toString() +"]";
+	public void setLength(double length) {
+		this.length = length;
 	}
-	
-
+	public double getWidth() {
+		return width;
+	}
+	public void setWidth(double width) {
+		this.width = width;
+	}
+   public double getArea()
+   {
+	   return this.length*this.width;
+   }
+@Override
+public String toString() {
+	return "Rectangle [length=" + length + ", width=" + width + "]";
+}
+   
 }
