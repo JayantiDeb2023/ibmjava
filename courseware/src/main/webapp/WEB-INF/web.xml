@@ -1,0 +1,72 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  <servlet-name>MyController</servlet-name>
+  <display-name>MyController</display-name>
+  <servlet-class>org.courseware.controller.MyController</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>AddServlet</servlet-name>
+  <display-name>AddServlet</display-name>
+  <servlet-class>org.courseware.view.AddServlet</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>SearchCourse</servlet-name>
+  <display-name>SearchCourse</display-name>
+  <description></description>
+  <servlet-class>org.courseware.view.SearchCourse</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>ViewServlet</servlet-name>
+  <display-name>viewServlet</display-name>
+  <servlet-class>org.courseware.view.ViewServlet</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>ViewStudent</servlet-name>
+  <display-name>viewStudent</display-name>
+  <servlet-class>org.courseware.view.ViewStudent</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>ErrorServlet</servlet-name>
+  <display-name>ErrorServlet</display-name>
+  <servlet-class>org.courseware.view.ErrorServlet</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>RegisterServlet</servlet-name>
+  <display-name>RegisterServlet</display-name>
+  <servlet-class>org.courseware.view.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>MyController</servlet-name>
+  <url-pattern>/controller.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>AddServlet</servlet-name>
+  <url-pattern>/addcoursename.view</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>ViewServlet</servlet-name>
+  <url-pattern>/view_list.view</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>ViewStudent</servlet-name>
+  <url-pattern>/view_studentlist.view</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>ErrorServlet</servlet-name>
+  <url-pattern>/error.view</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>RegisterServlet</servlet-name>
+  <url-pattern>/register.view</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  <servlet-name>SearchCourse</servlet-name>
+  <url-pattern>/search.view</url-pattern>
+  </servlet-mapping>
+</web-app>
