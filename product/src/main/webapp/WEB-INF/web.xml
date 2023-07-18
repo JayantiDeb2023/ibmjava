@@ -1,0 +1,39 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+<servlet>
+<servlet-name>MyController</servlet-name>
+<display-name>MyController</display-name>
+<description></description>
+<servlet-class>org.product.controller.MyController</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>AddServlet</servlet-name>
+<display-name>AddServlet</display-name>
+<description></description>
+<servlet-class>org.controller.view.AddServlet</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>ViewServlet</servlet-name>
+<display-name>ViewServlet</display-name>
+<description></description>
+<servlet-class>org.controller.view.ViewServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>MyController</servlet-name>
+<url-pattern>/controller.do</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+  	<servlet-name>AddServlet</servlet-name>
+  	<url-pattern>/add_list.view</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ViewServlet</servlet-name>
+  	<url-pattern>/view_list.view</url-pattern>
+  </servlet-mapping>
+   <welcome-file-list>
+  <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>
