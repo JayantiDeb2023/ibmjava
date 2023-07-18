@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean name="theCoach" class="Model.CricketCoach">
+<constructor-arg name="fortuneService" ref="myFortuneService"></constructor-arg>
+</bean>
+<bean name="myFortuneService" class="Model.SadfortuneService"></bean>
+<bean name="Person" class="Model.Person">
+<constructor-arg name="firstname" value="jayanti"></constructor-arg>
+<constructor-arg name="lastname" value="deb"></constructor-arg>
+<constructor-arg name="address" value="a"></constructor-arg>
+</bean>
+<bean name="a" class="Model.Address">
+<constructor-arg name="line1" value="Kolkata"/>
+<constructor-arg name="line2" value="India"/></bean>
+</beans>
